@@ -597,3 +597,28 @@ form button{
 		margin-bottom: 20px;
 	}
 }
+@media (max-width:546px){
+	.slider h1 {
+		font-size:38px;
+	}
+
+	.dark-description h4{
+		font-size:20px;
+	}
+	.dark-description,
+	.quotes .dark-description {
+		padding: 39px 22px;
+	}
+	.dark-description .motos{
+		display: none;
+	}
+	blockquote:before{
+		display: none;
+	}
+	.row .form-group:last-child,
+	.row .form-group {
+		width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
