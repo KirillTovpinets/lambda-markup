@@ -81,6 +81,7 @@ blockquote:before{
 }
 section{
 	padding:100px 0px;
+	width: 100%;
 }
 footer{
 	padding: 61px 0;
@@ -217,7 +218,6 @@ nav ul li a{
 	line-height: initial;
 	vertical-align: middle;
 	margin: 0 auto;
-	width:970px;
 }
 .slider h1{
 	color: #fff;
@@ -279,7 +279,10 @@ nav ul li a{
 .dark-description{
 	padding:79px 70px 85px;
 	background: rgba(0,0,0,.67);
-	width: 570px;
+	width:55%;
+}
+.quotes .dark-description{
+	width: 100%;
 }
 .yellow-header{
 	color: #cc9900;
@@ -318,7 +321,7 @@ nav ul li a{
 	display: inline-block;
 	border:3px solid #47423b;
 	border-radius: 50%;
-	margin-right:40px;
+	margin-right:20px;
 	margin-bottom:10px;
 }
 .moto:first-child{
@@ -533,6 +536,8 @@ form button{
 }
 .menu-toggler{
 	display: none;
+	border:none;
+	background: none;
 }
 @media (max-width:1300px){
 	nav {
@@ -561,6 +566,9 @@ form button{
 		width: 100%;
 		padding: 0;
 	}
+	.fine-ingredients .description {
+		width: 100%;
+	}
 }
 @media (max-width:768px){
 	.right-food-section .image img{
@@ -568,5 +576,24 @@ form button{
 	}
 	.right-food-section .white-description{
 		width: 100%;
+	}
+	blockquote p, blockquote cite {
+		font-size:20px;
+		line-height:27px;
+	}
+	.menu .col-2{
+		width: 100%;
+	}
+	footer .col-3 {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.moto{
+		height: 70px;
+		width: 70px;
+	}
+	.buttons button:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 20px;
 	}
 }
