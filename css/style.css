@@ -2,7 +2,6 @@
 	box-sizing: border-box;
 }
 body{
-	width:1600px;
 	padding: 0;
 	margin: 0 auto;
 	font-family: 'Yeseva One';
@@ -102,6 +101,9 @@ footer p{
 	color: #fff;
 	border-radius: 0px;
 }
+.btn:hover{
+	cursor: pointer;
+}
 .btn-black{
 	background-color: rgba(0,0,0,.38);
 	border: 1px solid black;
@@ -148,6 +150,11 @@ form .btn-warning{
 	width:80%;
 	margin:0 auto;
 }
+.container:before{
+	content: '';
+	display: table;
+	clear: both;
+}
 nav{
 	float:right;
 	font-size:0px;
@@ -158,15 +165,10 @@ nav ul{
 	padding:0px;
 	margin:0px;
 }
-
-.wrapper{
-	width: inherit;
-	min-height: calc(442vh - 331px);
-}
 header{
 	background: linear-gradient(to bottom, black, transparent);
 	position: absolute;
-	width: inherit;
+	width: 100%;
 }
 nav ul li{
 	font-family:'Gentium Book Basic';
@@ -186,11 +188,10 @@ nav ul li:last-child a{
 }
 nav ul li:not(:last-child):hover{
 	border-top: 2px solid rgba(203, 200, 189, 1);
-	
 	cursor: pointer;
 }
 nav ul li:not(:last-child):hover a{
-	color: #fff;
+	color: #dab33e;
 	text-decoration: none;
 }
 nav ul li a{
@@ -205,6 +206,8 @@ nav ul li a{
 .slider{
 	height:750px;
 	background: url('../images/slider-background.jpg');
+	background-position: center;
+	background-size: cover;
 	line-height: 750px;
 	text-align: center;
 	padding:0px;
@@ -240,7 +243,8 @@ nav ul li a{
 
 .quotes{
 	background: url("../images/section-background-3.jpg");
-	background-position: 0px -262px;
+	background-size: cover;
+	background-position: center;
 }
 .menu{
 	background:#ececec;
@@ -256,7 +260,8 @@ nav ul li a{
 	top: 0;
 }
 .right-food-section .white-description{
-	width:52%;
+	width:50%;
+	float:left;
 }
 .left-position{
 	float: left;
@@ -265,9 +270,8 @@ nav ul li a{
 	float:right;
 	margin-right:40px;
 }
-.right-food-section .white-description{
-	max-width:430px;
-	margin-left:108px;
+.image img{
+	width: 100%;
 }
 .right-food-section .white-description p{
 	margin-bottom: 50px;
@@ -275,7 +279,7 @@ nav ul li a{
 .dark-description{
 	padding:79px 70px 85px;
 	background: rgba(0,0,0,.67);
-	max-width: 570px;
+	width: 570px;
 }
 .yellow-header{
 	color: #cc9900;
@@ -299,12 +303,8 @@ nav ul li a{
 
 }
 .right-food-section .image{
-	position: relative;
-}
-.right-food-section .image img{
-	position: absolute;
-	top:-44px;
-	right:64px;
+	width: 50%;
+	float:right;
 }
 .motos{
 	text-align: center;
@@ -335,19 +335,15 @@ nav ul li a{
 	margin-right: 0;
 }
 .fine-ingredients{
-	background-image: url('../images/section-background-2.jpg')
+	background-image: url('../images/section-background-2.jpg');
+	background-size: cover;
+	background-position: center;
 }
 
 .col-2{
 	width: 50%;
 	float:left;
 	text-align: center;
-}
-.col-2:first-child{
-	padding-left: 23px;
-}
-.col-2:last-child{
-	padding-right: 23px;
 }
 
 footer .col-3{
@@ -379,6 +375,7 @@ footer p{
 	max-width: 451px;
 	margin:0 auto;
 	margin-bottom:53px;
+	padding: 0 10px;
 }
 
 .col-2 .table .menu-item{
@@ -450,7 +447,7 @@ footer p{
 	font-family: 'Lato';
 	font-size:14px;
 	position: absolute;
-	top:-25px;
+	top:-22px;
 	right:-1px;
 	padding:2px 13px;
 	background:#cc9900;
@@ -472,25 +469,20 @@ footer p{
 	padding-bottom: 90px;
 }
 .contactus .image{
-	width:270px;
 	float: left;
+	width: 50%;
 }
-.contactus .image:first-child{
-	margin-right: 30px;
+.contactus .image{
+	padding: 5px;
 }
 .contactus p{
 	margin-bottom: 5px;
-}
-.contactus .col-2:first-child{
-	padding:0 0 0 40px;
 }
 .contactus .white-description{
 	margin: 0;
 }
 .contactus .col-2:last-child{
-	margin-left: 87px;
-	padding: 0px;
-	width: 430px;
+	padding-left: 87px;
 }
 
 form{
@@ -538,4 +530,43 @@ form button{
 .form-control::placeholder{
 	font-style: italic;
 	font-family: 'Open Sans';
+}
+.menu-toggler{
+	display: none;
+}
+@media (max-width:1300px){
+	nav {
+		display: none;
+	}
+	.menu-toggler {
+		display: block;
+		float:right;
+		padding-top: 36px;
+		font-size:30px;
+		color:#ccc;
+	}
+}
+@media (max-width:992px){
+	.fine-ingredients .description {
+		margin: 0 auto;
+		float: none;
+	}
+	.slider h1 {
+		font-size:63px;
+	}
+	.contactus .images-container{
+		display: none;
+	}
+	.contactus .col-2.form-container{
+		width: 100%;
+		padding: 0;
+	}
+}
+@media (max-width:768px){
+	.right-food-section .image img{
+		display: none;
+	}
+	.right-food-section .white-description{
+		width: 100%;
+	}
 }
